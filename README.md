@@ -1,6 +1,9 @@
 # Subject7 Plugin
 Integration created for NHLBI to run tests with Subject7. Plugin procedures are written in Groovy as requested by NHLBI.
 
+## Installation
+Download the NHLBI-Subject7-<version>.zip file and install to Flow via Administration->Plugins->Install From File/URL->File Install
+
 ## Configurations
 Configuration: config name
 Credential: username and password
@@ -21,7 +24,7 @@ BaseClient is a helper class for making generic REST API calls. Both EFClient an
 EFClient wraps up REST API calls to the EFlow server and contains methods that run EFlow related actions, such as retrieving plugin configuration data and setting a property.
 ##### Subject7Client
 This property contains the helper class SSClient. It contains methods to construct and run REST requests to Subject7 using basic auth.</p>
-The REST URI prefix is defined in this class under "uriPrefix". Update this value if Subject7 updates their API root path.</p>
+The REST URI prefix is defined in this class under "uriPrefix". Update this value if Subject7 updates their API root path.
 
 Swagger documentation for Subject7 REST API:
 https://proof.subject-7.com/spec/index.html
