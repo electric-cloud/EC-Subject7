@@ -1,0 +1,15 @@
+<plugin>
+  <key>NHLBI-Subject7</key>
+  <label>NHLBI-Subject7</label>
+  <version>1.0.0.6</version>
+  <author>G. Zeng</author>
+  <authorUrl>electric-cloud.com</authorUrl>
+  <category>Test</category>
+  <commander-version min="6.0" />
+  <description>Plugin integration with Subject7</description>
+  <extensionVersion>1</extensionVersion>
+  <pluginWizardBased>true</pluginWizardBased>
+  <configure>ec_config</configure>
+  <depends min="1.4.1">EC-PluginManager</depends>
+  <help>help.xml</help>
+</plugin>
