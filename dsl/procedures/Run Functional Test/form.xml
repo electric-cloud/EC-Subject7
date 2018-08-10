@@ -21,15 +21,7 @@
     <label>Configuration:</label>
     <property>config</property>
     <required>1</required>
-    <documentation></documentation>
-    <value></value>
-  </formElement>
-  <formElement>
-    <type>entry</type>
-    <label>Data Sets:</label>
-    <property>dataSet</property>
-    <required>0</required>
-    <documentation></documentation>
+    <documentation>Name of the plugin configuration to use to connect to Subject7</documentation>
     <value></value>
   </formElement>
   <formElement>
@@ -37,7 +29,15 @@
     <label>Execution Name:</label>
     <property>executionName</property>
     <required>1</required>
-    <documentation></documentation>
+    <documentation>Name of the execution to run</documentation>
+    <value></value>
+  </formElement>
+  <formElement>
+    <type>entry</type>
+    <label>pool:</label>
+    <property>pool</property>
+    <required>0</required>
+    <documentation>Subject7 pool to run tests on</documentation>
     <value></value>
   </formElement>
   <formElement>
@@ -45,7 +45,15 @@
     <label>Test Case Name:</label>
     <property>testCaseName</property>
     <required>0</required>
-    <documentation></documentation>
+    <documentation>Name of the test case to run</documentation>
+    <value></value>
+  </formElement>
+  <formElement>
+    <type>entry</type>
+    <label>Data Sets:</label>
+    <property>dataSet</property>
+    <required>0</required>
+    <documentation>List of data sets to run, in this format: template_name_1=data_set_1; template_name_2=data_set_2, data_set_3 ...</documentation>
     <value></value>
   </formElement>
 </editor>

@@ -21,7 +21,7 @@
     <label>Configuration:</label>
     <property>config</property>
     <required>1</required>
-    <documentation></documentation>
+    <documentation>Name of the plugin configuration to use to connect to Subject7</documentation>
     <value></value>
   </formElement>
   <formElement>
@@ -29,7 +29,7 @@
     <label>Test ID:</label>
     <property>testId</property>
     <required>1</required>
-    <documentation></documentation>
+    <documentation>Test ID for the load test to be canceled</documentation>
     <value></value>
   </formElement>
 </editor>

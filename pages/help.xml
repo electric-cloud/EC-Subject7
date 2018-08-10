@@ -40,6 +40,11 @@
                 <td>Name of the execution set to be run.</td>
             </tr>
             <tr>
+                <td>Pool</td>
+                <td>pool</td>
+                <td>Pool defined in Subject7 to run test case on.</td>
+            </tr>
+            <tr>
                 <td>Test Case Name</td>
                 <td>testCaseName</td>
                 <td>Name of the test case to be run. Data sets parameter should be supplied along with the test case.</td>
@@ -72,6 +77,21 @@
                 <td class="required">Load Plan Name</td>
                 <td>loadPlanName</td>
                 <td>Name of the load plan to be run.</td>
+            </tr>
+            <tr>
+                <td>Pool</td>
+                <td>pool</td>
+                <td>Pool defined in Subject7 to run test case on.</td>
+            </tr>
+            <tr>
+                <td>Test Case Name</td>
+                <td>testCaseName</td>
+                <td>Name of the test case to be run. Data sets parameter should be supplied along with the test case.</td>
+            </tr>
+            <tr>
+                <td>Data Sets</td>
+                <td>datatSet</td>
+                <td>Data sets to be used. Accepts input in the format template_name_1=data_set_1; template_name_2=data_set_2, data_set_3, ...</td>
             </tr>
             </tbody>
             </table>
@@ -107,13 +127,14 @@
             <p>Procedure to delete a plugin configuration. This is run automatically when you delete a configuration from the plugin "Configure" page. This procedure deletes all property sheets and credentials associated with a configuration.</p>
 
             <h2 id="notes">Misc. Notes</h2>
-            <p>Grooby helper classes for these procedures are defined in properties under /projects/NHLBI-Subject7-[version]/scripts. These helper classes are referenced via the preamble property, which is included at the start of every procedure involving API calls.</p>
+            <p>Groovy helper classes for these procedures are defined in properties under /projects/NHLBI-Subject7-[version]/scripts. These helper classes are referenced via the preamble property, which is included at the start of every procedure involving API calls.</p>
             <h4>clientHelper</h4>
             <p>This property contains the helper classes BaseClient and EFClient.</p>
             <p>BaseClient is a helper class for making generic REST API calls. Both EFClient and SSClient extend on top of this class for making tool-specific calls.</p>
             <p>EFClient wraps up REST API calls to the EFlow server and contains methods that run EFlow related actions, such as retrieving plugin configuration data and setting a property.</p>
             <h4>Subject7Client</h4>
             <p>This property contains the helper class SSClient. It contains methods to construct and run REST requests to Subject7 using basic auth.</p>
+            <p>The procedure constructs the JSON data to be passed on with the REST API call, which are each defined as methods in this class.</p>
             <p>The REST URI prefix is defined in this class under "uriPrefix". Update this value if Subject7 updates their API root path.</p>
             
         </div>

@@ -1,7 +1,7 @@
 <plugin>
   <key>NHLBI-Subject7</key>
   <label>NHLBI-Subject7</label>
-  <version>1.0.0.6</version>
+  <version>1.0.0.7</version>
   <author>G. Zeng</author>
   <authorUrl>electric-cloud.com</authorUrl>
   <category>Test</category>
