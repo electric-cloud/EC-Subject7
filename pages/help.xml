@@ -1,22 +1,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta content="text/html; charset=us-ascii" http-equiv="content-type"/>
-        <title>NHLBI-Subject7</title>
-        <link rel="stylesheet" href="../../plugins/EC-Tomcat/pluginhelp.css" type="text/css" media="screen" />
-    </head>
-    <body>
-        <div class="help">
-            <h1>NHLBI-Subject7</h1>
+<head>
+  <meta content="text/html; charset=us-ascii" http-equiv="content-type"/>
+  <title>@PLUGIN_KEY@ Plugin</title>
+  <link rel="stylesheet" href="../../plugins/@PLUGIN_KEY@/pluginhelp.css" type="text/css" media="screen" />
+</head>
+<body>
+  <div class="help">
+  <h1>@PLUGIN_KEY@</h1>
+  <p>Plugin Version @PLUGIN_VERSION@</p>
+  <hr style="margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;" noshade="noshade" />
+
+  <p>@PLUGIN_KEY@ is a collection of procedures to integrate Subject7 with ElectricFlow.</p>
+
         	<h2>Contents</h2>
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#procedures">Plugin Procedures</a></li>
                 <li><a href="#notes">Misc. Notes</a></li>
             </ul>
-            
+
             <h2 id="overview">Overview</h2>
             <p></p>
-            
+
             <h2 id="procedures">Plugin Procedures</h2>
             <h3>Run Functional Test</h3>
             <p>Runs Subject7 functional test execution set.</p>
@@ -56,7 +61,7 @@
             </tr>
             </tbody>
             </table>
-            
+
             <h3>Run Load Test</h3>
             <p>Starts a load plan test run.</p>
             <table class="grid">
@@ -95,7 +100,32 @@
             </tr>
             </tbody>
             </table>
-            
+
+            <h3>Collect Data</h3>
+            <p>Collect test data from a test execution and upload them to the
+              Devops Inisght Server.</p>
+            <table class="grid">
+            <thead>
+                <tr>
+                    <th>Label</th>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="required">Configuration</td>
+                <td>config</td>
+                <td>Provide the name of your Subject7 configuration. Information in the configuration is used to connect and authenticate to Subject7.</td>
+            </tr>
+            <tr>
+                <td class="required">Test ID</td>
+                <td>executionId</td>
+                <td>ID for the execution test to be collected.</td>
+            </tr>
+            </tbody>
+            </table>
+
             <h3>Cancel Load Test</h3>
             <p>Cancels a load plan test.</p>
             <table class="grid">
@@ -119,10 +149,10 @@
             </tr>
             </tbody>
             </table>
-            
+
             <h3>createConfiguration</h3>
             <p>Procedure to create and set up a new plugin configuration. This is run automatically when you create a new configuration from the plugin "Configure" page. This procedure creates configuration property sheets and credentials, attaches the credentials to steps they are defined for, and grants the configuration creator full permissions on the credentials.</p>
-            
+
             <h3>deleteConfiguration</h3>
             <p>Procedure to delete a plugin configuration. This is run automatically when you delete a configuration from the plugin "Configure" page. This procedure deletes all property sheets and credentials associated with a configuration.</p>
 
@@ -136,7 +166,7 @@
             <p>This property contains the helper class SSClient. It contains methods to construct and run REST requests to Subject7 using basic auth.</p>
             <p>The procedure constructs the JSON data to be passed on with the REST API call, which are each defined as methods in this class.</p>
             <p>The REST URI prefix is defined in this class under "uriPrefix". Update this value if Subject7 updates their API root path.</p>
-            
+
         </div>
     </body>
-</html>	
+</html>

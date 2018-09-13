@@ -1,0 +1,9 @@
+2018-09-12 Laurent Rochette <lrochette@electric-cloud.com>
+  * 1.1.0.18: Add procedure to collect execution run and send them to DOIS
+
+2018-09-10 Laurent Rochette <lrochette@electric-cloud.com>
+  * 1.0.0.9:
+    Added ecpluginbuilder mechanism
+    Reset ec_setup.pl to pluginWizard default
+2018-08-10 Guo Zeng <gzeng@electric-cloud.com
+    * 1.0.0.7: initial release

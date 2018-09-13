@@ -2,7 +2,7 @@
 Integration created for NHLBI to run tests with Subject7. Plugin procedures are written in Groovy as requested by NHLBI.
 
 ## Installation
-Download the NHLBI-Subject7-<version>.zip file and install to Flow via Administration->Plugins->Install From File/URL->File Install
+Download the NHLBI-Subject7-<version>.jar file and install to Flow via Administration->Plugins->Install From File/URL->File Install
 
 ## Configurations
 Configuration: config name

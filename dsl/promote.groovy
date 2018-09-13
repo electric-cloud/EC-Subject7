@@ -14,11 +14,14 @@ def pluginDir = getProperty("/projects/$pluginName/pluginDir").value
 
 //List of procedure steps to which the plugin configuration credentials need to be attached
 def stepsWithAttachedCredentials = [
-		[procedureName:'Cancel Load Test',stepName:'cancelTest'],[procedureName:'Run Load Test',stepName:'runAndWait'],[procedureName:'Run Functional Test',stepName:'runAndWait']
+		[procedureName:'Cancel Load Test',stepName:'cancelTest'],
+		[procedureName:'Run Load Test',stepName:'runAndWait'],
+		[procedureName:'Run Functional Test',stepName:'runAndWait'],
+		[procedureName:'collectData',stepName:'collectData']
 	]
-	
+
 project pluginName, {
-	
+
 	loadPluginProperties(pluginDir, pluginName)
 	loadProcedures(pluginDir, pluginKey, pluginName, stepsWithAttachedCredentials)
 	//plugin configuration metadata

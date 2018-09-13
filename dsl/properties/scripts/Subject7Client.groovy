@@ -2,7 +2,7 @@ public class SSClient extends BaseClient {
 
     def url
     def key
-    
+
     SSClient (url, key) {
         this.url = url
         this.key = key
@@ -27,27 +27,36 @@ public class SSClient extends BaseClient {
     def print() {
         println "$url"
     }
-    
+
+
     def runExecution (Object body) {
         doHttpPost("executions", body)
     }
-    
+
     def runLoad (Object body) {
         doHttpPost("load-plan-executions", body)
     }
-    
+
     def cancelLoad (int id) {
         doHttpPut("load-plan-executions/$id")
     }
-    
+
     def getExecution (int id) {
         doHttpGet("executions/$id")
     }
-    
+
+    def getTestCaseExecution (int id) {
+        doHttpGet("test-case-executions/$id")
+    }
+
+    def getTestGroup (int id) {
+        doHttpGet("executions/$id/test-groups")
+    }
+
     def getLoad (int id) {
         doHttpGet("load-plan-executions/$id")
     }
-    
+
     def waitForRun (String type, int id, int limit, int sleepTime){
         println "Waiting for $type test to be completed..."
         def counter = 0

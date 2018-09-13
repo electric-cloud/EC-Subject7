@@ -17,23 +17,19 @@
 -->
 <editor>
   <formElement>
-    <type>select</type>
-    <label>Style:</label>
-    <property>formalLevel</property>
+    <type>entry</type>
+    <label>Configuration:</label>
+    <property>config</property>
     <required>1</required>
-    <documentation></documentation>
-    <option>
-      <name>Usual</name>
-      <value>usual</value>
-    </option>
-    <option>
-      <name>Elegant</name>
-      <value>elegant</value>
-    </option>
-    <option>
-      <name>Surfer</name>
-      <value>surfer</value>
-    </option>
-    <value>usual</value>
+    <documentation>Name of the plugin configuration to use to connect to Subject7</documentation>
+    <value></value>
+  </formElement>
+  <formElement>
+    <type>entry</type>
+    <label>Execution ID:</label>
+    <property>executionId</property>
+    <required>1</required>
+    <documentation>Id of the execution to get data for</documentation>
+    <value></value>
   </formElement>
 </editor>

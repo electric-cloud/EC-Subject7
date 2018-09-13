@@ -2,7 +2,7 @@
   <key>NHLBI-Subject7</key>
   <label>NHLBI-Subject7</label>
   <version>1.0.0.7</version>
-  <author>G. Zeng</author>
+  <author>G. Zeng and L. Rochette</author>
   <authorUrl>electric-cloud.com</authorUrl>
   <category>Test</category>
   <commander-version min="6.0" />

@@ -14,7 +14,7 @@ my $ec = new ElectricCommander->new();
 
 my $epb="../ecpluginbuilder";
 
-my $pluginVersion = "1.0.0";
+my $pluginVersion = "1.1.0";
 my $pluginKey = "NHLBI-Subject7";
 
 GetOptions ("version=s" => \$pluginVersion)

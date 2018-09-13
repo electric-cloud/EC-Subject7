@@ -25,14 +25,6 @@
     <value></value>
   </formElement>
   <formElement>
-    <type>credential</type>
-    <label>Credential:</label>
-    <property>credential</property>
-    <required>1</required>
-    <documentation></documentation>
-    <attachedAsParameterToStep>createAndAttachCredential</attachedAsParameterToStep>
-  </formElement>
-  <formElement>
     <type>entry</type>
     <label>Description:</label>
     <property>desc</property>
@@ -47,5 +39,13 @@
     <required>1</required>
     <documentation></documentation>
     <value></value>
+  </formElement>
+  <formElement>
+    <type>credential</type>
+    <label>Credential:</label>
+    <property>credential</property>
+    <required>1</required>
+    <documentation></documentation>
+    <attachedAsParameterToStep>createAndAttachCredential</attachedAsParameterToStep>
   </formElement>
 </editor>
