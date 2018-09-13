@@ -37,7 +37,9 @@
             <tr>
                 <td class="required">Configuration</td>
                 <td>config</td>
-                <td>Provide the name of your Subject7 configuration. Information in the configuration is used to connect and authenticate to Subject7.</td>
+                <td>Provide the name of your Subject7 configuration.
+                  Information in the configuration is used to connect and
+                  authenticate to Subject7.</td>
             </tr>
             <tr>
                 <td class="required">Execution Name</td>
@@ -76,7 +78,8 @@
             <tr>
                 <td class="required">Configuration</td>
                 <td>config</td>
-                <td>Provide the name of your Subject7 configuration. Information in the configuration is used to connect and authenticate to Subject7.</td>
+                <td>Provide the name of your Subject7 configuration. Information
+                  in the configuration is used to connect and authenticate to Subject7.</td>
             </tr>
             <tr>
                 <td class="required">Load Plan Name</td>
@@ -116,7 +119,8 @@
             <tr>
                 <td class="required">Configuration</td>
                 <td>config</td>
-                <td>Provide the name of your Subject7 configuration. Information in the configuration is used to connect and authenticate to Subject7.</td>
+                <td>Provide the name of your Subject7 configuration. Information
+                  in the configuration is used to connect and authenticate to Subject7.</td>
             </tr>
             <tr>
                 <td class="required">Test ID</td>
@@ -140,7 +144,8 @@
             <tr>
                 <td class="required">Configuration</td>
                 <td>config</td>
-                <td>Provide the name of your Subject7 configuration. Information in the configuration is used to connect and authenticate to Subject7.</td>
+                <td>Provide the name of your Subject7 configuration. Information
+                  in the configuration is used to connect and authenticate to Subject7.</td>
             </tr>
             <tr>
                 <td class="required">Test ID</td>
@@ -151,21 +156,40 @@
             </table>
 
             <h3>createConfiguration</h3>
-            <p>Procedure to create and set up a new plugin configuration. This is run automatically when you create a new configuration from the plugin "Configure" page. This procedure creates configuration property sheets and credentials, attaches the credentials to steps they are defined for, and grants the configuration creator full permissions on the credentials.</p>
+            <p>Procedure to create and set up a new plugin configuration. This
+              is run automatically when you create a new configuration from the
+              plugin "Configure" page. This procedure creates configuration
+              property sheets and credentials, attaches the credentials to steps
+              they are defined for, and grants the configuration creator full
+              permissions on the credentials.</p>
 
             <h3>deleteConfiguration</h3>
-            <p>Procedure to delete a plugin configuration. This is run automatically when you delete a configuration from the plugin "Configure" page. This procedure deletes all property sheets and credentials associated with a configuration.</p>
+            <p>Procedure to delete a plugin configuration. This is run
+              automatically when you delete a configuration from the plugin
+              "Configure" page. This procedure deletes all property sheets and
+              credentials associated with a configuration.</p>
 
             <h2 id="notes">Misc. Notes</h2>
-            <p>Groovy helper classes for these procedures are defined in properties under /projects/Subject7-[version]/scripts. These helper classes are referenced via the preamble property, which is included at the start of every procedure involving API calls.</p>
+            <p>Groovy helper classes for these procedures are defined in
+              properties under /projects/Subject7-[version]/scripts. These
+              helper classes are referenced via the preamble property, which is
+              included at the start of every procedure involving API calls.</p>
             <h4>clientHelper</h4>
             <p>This property contains the helper classes BaseClient and EFClient.</p>
-            <p>BaseClient is a helper class for making generic REST API calls. Both EFClient and SSClient extend on top of this class for making tool-specific calls.</p>
-            <p>EFClient wraps up REST API calls to the EFlow server and contains methods that run EFlow related actions, such as retrieving plugin configuration data and setting a property.</p>
+            <p>BaseClient is a helper class for making generic REST API calls.
+              Both EFClient and SSClient extend on top of this class for making
+              tool-specific calls.</p>
+            <p>EFClient wraps up REST API calls to the EFlow server and contains
+              methods that run EFlow related actions, such as retrieving plugin
+              configuration data and setting a property.</p>
             <h4>Subject7Client</h4>
-            <p>This property contains the helper class SSClient. It contains methods to construct and run REST requests to Subject7 using basic auth.</p>
-            <p>The procedure constructs the JSON data to be passed on with the REST API call, which are each defined as methods in this class.</p>
-            <p>The REST URI prefix is defined in this class under "uriPrefix". Update this value if Subject7 updates their API root path.</p>
+            <p>This property contains the helper class SSClient. It contains
+              methods to construct and run REST requests to Subject7 using basic
+              auth.</p>
+            <p>The procedure constructs the JSON data to be passed on with the
+              REST API call, which are each defined as methods in this class.</p>
+            <p>The REST URI prefix is defined in this class under "uriPrefix".
+              Update this value if Subject7 updates their API root path.</p>
 
         </div>
     </body>

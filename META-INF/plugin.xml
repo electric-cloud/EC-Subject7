@@ -1,12 +1,12 @@
 <plugin>
-  <key>Subject7</key>
-  <label>Subject7</label>
+  <key>EC-Subject7</key>
+  <label>EC-Subject7</label>
   <version>1.0.0.7</version>
   <author>G. Zeng and L. Rochette</author>
   <authorUrl>electric-cloud.com</authorUrl>
   <category>Test</category>
   <commander-version min="6.0" />
-  <description>Plugin integration with Subject7</description>
+  <description>ElectricFlow integration with Subject7</description>
   <extensionVersion>1</extensionVersion>
   <pluginWizardBased>true</pluginWizardBased>
   <configure>ec_config</configure>

@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# Build, upload and promote Subject7 using ecpluginbuilder
+# Build, upload and promote EC-Subject7 using ecpluginbuilder
 #		https://github.com/electric-cloud/ecpluginbuilder
 
 use Getopt::Long;
@@ -15,7 +15,7 @@ my $ec = new ElectricCommander->new();
 my $epb="../ecpluginbuilder";
 
 my $pluginVersion = "1.1.0";
-my $pluginKey = "Subject7";
+my $pluginKey = "EC-Subject7";
 
 GetOptions ("version=s" => \$pluginVersion)
 		or die (qq(
