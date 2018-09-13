@@ -16,6 +16,7 @@ URL: base url to accessing the Subject7 instance (e.g. https://proof.subject-7.c
 #### Run Functional Tests
 #### Run Load Tests
 #### Cancel Load Tests
+#### collectData
 
 ## Misc. Notes
 Groovy helper classes for these procedures are modeled after our existing Groovy
