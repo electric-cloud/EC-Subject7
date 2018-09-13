@@ -2,7 +2,7 @@
 Integration created for NHLBI to run tests with Subject7. Plugin procedures are written in Groovy as requested by NHLBI.
 
 ## Installation
-Download the NHLBI-Subject7-<version>.jar file and install to Flow via Administration->Plugins->Install From File/URL->File Install
+Download the Subject7-<version>.jar file and install to Flow via Administration->Plugins->Install From File/URL->File Install
 
 ## Configurations
 Configuration: config name
@@ -17,7 +17,7 @@ URL: base url to accessing the Subject7 instance (e.g. https://proof.subject-7.c
 #### Cancel Load Tests
 
 ## Misc. Notes
-Groovy helper classes for these procedures are modeled after our existing Groovy plugins and defined in properties under /projects/NHLBI-Subject7-[version]/scripts. These helper classes are referenced via the preamble property, which is included at the start of every procedure involving API calls.
+Groovy helper classes for these procedures are modeled after our existing Groovy plugins and defined in properties under /projects/Subject7-[version]/scripts. These helper classes are referenced via the preamble property, which is included at the start of every procedure involving API calls.
 ##### clientHelper
 This property contains the helper classes BaseClient and EFClient.
 BaseClient is a helper class for making generic REST API calls. Both EFClient and SSClient extend on top of this class for making tool-specific calls.

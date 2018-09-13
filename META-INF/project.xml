@@ -1,7 +1,7 @@
 <exportedData buildLabel="build_3.5_30434_OPT_2010.01.13_07:32:22" buildVersion="3.5.1.30434" version="39">
-  <exportPath>/projects/NHLBI-Subject7-1.0.0.7</exportPath>
+  <exportPath>/projects/Subject7-1.0.0.7</exportPath>
   <project>
-    <projectName>NHLBI-Subject7-1.0.0.7</projectName>
+    <projectName>Subject7-1.0.0.7</projectName>
     <propertySheet>
       <property>
         <expandable>0</expandable>

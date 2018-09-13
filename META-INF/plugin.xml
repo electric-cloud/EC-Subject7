@@ -1,6 +1,6 @@
 <plugin>
-  <key>NHLBI-Subject7</key>
-  <label>NHLBI-Subject7</label>
+  <key>Subject7</key>
+  <label>Subject7</label>
   <version>1.0.0.7</version>
   <author>G. Zeng and L. Rochette</author>
   <authorUrl>electric-cloud.com</authorUrl>

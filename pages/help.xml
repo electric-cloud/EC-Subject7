@@ -157,7 +157,7 @@
             <p>Procedure to delete a plugin configuration. This is run automatically when you delete a configuration from the plugin "Configure" page. This procedure deletes all property sheets and credentials associated with a configuration.</p>
 
             <h2 id="notes">Misc. Notes</h2>
-            <p>Groovy helper classes for these procedures are defined in properties under /projects/NHLBI-Subject7-[version]/scripts. These helper classes are referenced via the preamble property, which is included at the start of every procedure involving API calls.</p>
+            <p>Groovy helper classes for these procedures are defined in properties under /projects/Subject7-[version]/scripts. These helper classes are referenced via the preamble property, which is included at the start of every procedure involving API calls.</p>
             <h4>clientHelper</h4>
             <p>This property contains the helper classes BaseClient and EFClient.</p>
             <p>BaseClient is a helper class for making generic REST API calls. Both EFClient and SSClient extend on top of this class for making tool-specific calls.</p>
