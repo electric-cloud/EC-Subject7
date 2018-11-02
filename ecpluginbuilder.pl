@@ -61,6 +61,8 @@ move("build/${pluginKey}.jar", ".");
 #$ec->uninstallPlugin($pluginKey) || print "No old plugin\n";
 
 # Install plugin
+$ec->setTimeout(600);
+
 print "[INFO] - Installing plugin ${pluginKey}.jar...\n";
 $ec->installPlugin("${pluginKey}.jar");
 
