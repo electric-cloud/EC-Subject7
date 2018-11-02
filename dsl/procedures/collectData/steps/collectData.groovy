@@ -1,3 +1,4 @@
+import com.electriccloud.client.groovy.ElectricFlow
 $[/myProject/scripts/preamble]
 
 def pluginProjectName = '$[/myProject/projectName]'
@@ -35,24 +36,29 @@ def key = "$clientId:$clientSecret".bytes.encodeBase64().toString()
 SSClient ssClient = new SSClient(url, key)
 //ssClient.print()
 println "gather data from test $executionId..."
-def tce=ssClient.getTestCaseExecution(executionId)
+def tce=ssClient.getTestCaseExecution(executionId).data
 println tce.toString()
+
+println "id: " + tce.id.toString()
+println "status: " + tce.status
+println "duration: " + tce.duration
 
 _runId=tce.id
 _status=tce.status
 _duration=tce.duration * 1000
 
 println "gather test groups"
-def tg=ssClient.getTestGroup(executionId)
+def tg=ssClient.getTestGroup(executionId).data
 println tg.toString()
 
+def totalTests=0
 tg.each {
-  testGroupCounter++
   def resultString=it.result
   def res = resultString.split('/')
   _successfulTests += res[0].toInteger()
   totalTests += res[1].toInteger()
 }
+_failedTests = totalTests - _successfulTests
 println "baseDrilldownUrl: " + _baseDrilldownUrl
 println "buildNumber: " + _buildNumber
 println "category: " + _category
@@ -93,7 +99,8 @@ def _payload="""{
   "timestamp":"$_timestamp"
 }"""
 
-def result = efClient.sendReportingData(
+ElectricFlow ef = new ElectricFlow()
+def result = ef.sendReportingData(
   reportObjectTypeName: 'quality',
   payload: _payload)
 println result.toString()
