@@ -47,16 +47,27 @@ _runId=tce.id
 _status=tce.status
 _duration=tce.duration * 1000
 
-println "gather test groups"
+println "gather test groups $executionId"
 def tg=ssClient.getTestGroup(executionId).data
 println tg.toString()
 
 def totalTests=0
+def loop=0
 tg.each {
+  println "\nLoop $loop"
   def resultString=it.result
+  def testCaseName=it.testCaseName
+  println "  testCaseName: $testCaseName"
   def res = resultString.split('/')
   _successfulTests += res[0].toInteger()
   totalTests += res[1].toInteger()
+
+  println "  Calling getDetailledExecution:"
+  def tde=ssClient.getDetailledExecution(executionId, testCaseName).data
+  println "  Done with getDE"
+  println tde // .toString()
+  println "\n\n"
+  loop++
 }
 _failedTests = totalTests - _successfulTests
 println "baseDrilldownUrl: " + _baseDrilldownUrl

@@ -53,6 +53,10 @@ public class SSClient extends BaseClient {
         doHttpGet("executions/$id/test-groups")
     }
 
+    def getDetailledExecution (int id, String caseName) {
+       doHttpGet("test-case-executions?test-case=${caseName}&execution=$id")
+    }
+
     def getLoad (int id) {
         doHttpGet("load-plan-executions/$id")
     }

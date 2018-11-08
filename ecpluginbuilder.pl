@@ -69,3 +69,5 @@ $ec->installPlugin("${pluginKey}.jar");
 # Promote plugin
 print "[INFO] - Promoting plugin...\n";
 $ec->promotePlugin($pluginName);
+
+print "[INFO] - Done with '$pluginName'\n";
