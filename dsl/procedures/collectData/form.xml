@@ -24,6 +24,7 @@
     <documentation>Name of the plugin configuration to use to connect to Subject7</documentation>
     <value></value>
   </formElement>
+
   <formElement>
     <type>entry</type>
     <label>Execution ID:</label>
@@ -32,4 +33,13 @@
     <documentation>Id of the execution to get data for</documentation>
     <value></value>
   </formElement>
+
+  <formElement>
+    <label>Metadata property path:</label>
+    <property>metadataPropertyPath</property>
+    <documentation>Property sheet where run metadata will be stored. Optional field. If omitted, /myJob/subject7-%executionId% will be used.</documentation>
+    <required>0</required>
+    <type>entry</type>
+  </formElement>
+
 </editor>

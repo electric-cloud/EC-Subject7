@@ -128,7 +128,7 @@ public class BaseClient {
 
         logger(1, "requestUrl: $requestUrl")
         logger(1, "URI: $requestUri")
-        logger(1, "QUery: $queryArgs")
+        logger(1, "Query: $queryArgs")
         if (requestBody) logger(1, "Payload: $requestBody")
 
         def http = new HTTPBuilder(requestUrl)
@@ -178,4 +178,3 @@ public class Validation {
 
 @InheritConstructors
 class PluginException extends Exception {}
-
