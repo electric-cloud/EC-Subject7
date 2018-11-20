@@ -54,7 +54,8 @@ public class SSClient extends BaseClient {
     }
 
     def getDetailledExecution (int id, String caseName) {
-       doHttpGet("test-case-executions?test-case=${caseName}&execution=$id")
+       println "    getDetailledExecution ($id, $caseName)"
+       doHttpGet("test-case-executions", true, ['test-case': caseName, 'execution': id])
     }
 
     def getLoad (int id) {

@@ -3,7 +3,8 @@ $[/myProject/scripts/preamble]
 
 def pluginProjectName = '$[/myProject/projectName]'
 def configName = '$[config]'
-def executionId = $[executionId]
+def testExecutionId = $[executionId]
+String metadataPropertyPath = '$[metadataPropertyPath]'?'$[metadataPropertyPath]':'/myJob/subject7-$[executionId]'
 
 def _baseDrilldownUrl="https://www.subject-7.com/"
 int _buildNumber=0              // NUMBER
@@ -34,42 +35,34 @@ def clientSecret = pluginConfig.credential.password
 def key = "$clientId:$clientSecret".bytes.encodeBase64().toString()
 
 SSClient ssClient = new SSClient(url, key)
-//ssClient.print()
-println "gather data from test $executionId..."
-def tce=ssClient.getTestCaseExecution(executionId).data
+println "gather data from test $testExecutionId..."
+def tce=ssClient.getTestCaseExecution(testExecutionId).data
 println tce.toString()
 
-println "id: " + tce.id.toString()
-println "status: " + tce.status
-println "duration: " + tce.duration
-
-_runId=tce.id
+_executionId=tce.executionId
 _status=tce.status
 _duration=tce.duration * 1000
 
-println "gather test groups $executionId"
-def tg=ssClient.getTestGroup(executionId).data
+println ""
+println "gather test groups $_executionId"
+def tg=ssClient.getTestGroup(_executionId).data
 println tg.toString()
 
-def totalTests=0
+def _totalTests=0
 def loop=0
 tg.each {
-  println "\nLoop $loop"
   def resultString=it.result
   def testCaseName=it.testCaseName
-  println "  testCaseName: $testCaseName"
   def res = resultString.split('/')
   _successfulTests += res[0].toInteger()
-  totalTests += res[1].toInteger()
-
-  println "  Calling getDetailledExecution:"
-  def tde=ssClient.getDetailledExecution(executionId, testCaseName).data
-  println "  Done with getDE"
-  println tde // .toString()
-  println "\n\n"
+  _totalTests += res[1].toInteger()
   loop++
 }
-_failedTests = totalTests - _successfulTests
+
+_failedTests = _totalTests - _successfulTests
+println ""
+println "Recap:"
+println "------------------------------------------------"
 println "baseDrilldownUrl: " + _baseDrilldownUrl
 println "buildNumber: " + _buildNumber
 println "category: " + _category
@@ -88,6 +81,7 @@ println "sourceUrl: " + _sourceUrl
 println "status: " + _status
 println "successfulTests: " + _successfulTests
 println "timestamp: " + _timestamp
+
 
 def _payload="""{
   "baseDrilldownUrl":"$_baseDrilldownUrl",
@@ -114,4 +108,9 @@ ElectricFlow ef = new ElectricFlow()
 def result = ef.sendReportingData(
   reportObjectTypeName: 'quality',
   payload: _payload)
-println result.toString()
+
+println "\nSaving metatada to $metadataPropertyPath"
+ef.setProperty(propertyName: "$metadataPropertyPath/successfulTests" , value: "$_successfulTests")
+ef.setProperty(propertyName: "$metadataPropertyPath/failedTests" , value: "$_failedTests")
+ef.setProperty(propertyName: "$metadataPropertyPath/skippedTests" , value: "$_skippedTests")
+ef.setProperty(propertyName: "$metadataPropertyPath/totalTests" , value: "$_totalTests")
