@@ -14,7 +14,7 @@ my $ec = new ElectricCommander->new();
 
 my $epb="../ecpluginbuilder";
 
-my $pluginVersion = "1.2.0";
+my $pluginVersion = "1.2.1";
 my $pluginKey = "EC-Subject7";
 
 GetOptions ("version=s" => \$pluginVersion)

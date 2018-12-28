@@ -1,8 +1,9 @@
+import com.electriccloud.client.groovy.ElectricFlow
 $[/myProject/scripts/preamble]
 
 // test execution timeout settings for waiting for a run to complete
-def limit = 60 // limit loops to poll; can potentially wrap into a timeout
-def sleepTime = 10 // number of seconds to sleep per loop
+def limit = 80 // limit loops to poll; can potentially wrap into a timeout
+def sleepTime = 15 // number of seconds to sleep per loop
 
 def pluginProjectName = '$[/myProject/projectName]'
 def configName = '$[config]'
@@ -47,5 +48,6 @@ println "Kick off Functional test $execution..."
 //println body
 def startTestResult = ssClient.runExecution(body)
 def id = startTestResult.data.id
-println "Fuctional test ID $id"
+println "Functional test ID $id"
+efClient.setProperty('$[/myJobStep/jobStepId]', '/myJob/funcTestId', id.toString())
 ssClient.waitForRun('functional', id, limit, sleepTime)

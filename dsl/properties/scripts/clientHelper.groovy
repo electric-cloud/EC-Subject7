@@ -13,8 +13,7 @@ import static groovyx.net.http.Method.POST
 import static groovyx.net.http.Method.PUT
 
 public class EFClient extends BaseClient {
-
-    def getServerUrl() {
+     def getServerUrl() {
         def commanderServer = System.getenv('COMMANDER_SERVER')
         def commanderPort = System.getenv("COMMANDER_HTTPS_PORT")
         def secure = Integer.getInteger("COMMANDER_SECURE", 1).intValue()
@@ -119,6 +118,7 @@ public class EFClient extends BaseClient {
 public class BaseClient {
 
     def logLevel = 2
+
 
     Object doHttpRequest(Method method, String requestUrl,
                          String requestUri, def requestHeaders,

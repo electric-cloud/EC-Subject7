@@ -28,6 +28,19 @@
   <formElement>
     <type>entry</type>
     <label>Execution ID:</label>
+    <property>testCategory</property>
+    <required>0</required>
+    <documentation>Test category (used by the DevOps Inisght server reports)</documentation>
+    <option><name>system-test</name><value>system-test</value></option>
+    <option><name>unit-test</name><value>unit-test</value></option>
+    <option><name>smoke-test</name><value>smoke-test</value></option>
+    <option><name>load-test</name><value>load-test</value></option>
+    <value>system-test</value>
+  </formElement>
+
+  <formElement>
+    <type>select</type>
+    <label>Test Category:</label>
     <property>executionId</property>
     <required>1</required>
     <documentation>Id of the execution to get data for</documentation>

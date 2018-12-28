@@ -1,3 +1,6 @@
+2018-12-06 Laurent Rochette <lrochette@electric-cloud.com>
+  * 1.2.1.80: Fix #3: Changed the way data is sent to allow for stacked bars
+
 2018-11-20 Laurent Rochette <lrochette@electric-cloud.com>
   * 1.2.0.53: Fix #2: add a path to save metadata collected
 
