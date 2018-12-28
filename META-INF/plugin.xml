@@ -7,7 +7,6 @@
   <category>Test</category>
   <commander-version min="6.0" />
   <description>ElectricFlow integration with Subject7</description>
-  <extensionVersion>1</extensionVersion>
   <pluginWizardBased>true</pluginWizardBased>
   <configure>ec_config</configure>
   <depends min="1.4.1">EC-PluginManager</depends>
