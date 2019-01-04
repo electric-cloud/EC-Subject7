@@ -17,20 +17,20 @@
 -->
 <editor>
   <formElement>
-    <type>entry</type>
     <label>Configuration:</label>
     <property>config</property>
+    <type>entry</type>
     <required>1</required>
     <documentation>Name of the plugin configuration to use to connect to Subject7</documentation>
     <value></value>
   </formElement>
 
   <formElement>
-    <type>entry</type>
-    <label>Execution ID:</label>
+    <label>Test Category:</label>
     <property>testCategory</property>
+    <type>select</type>
     <required>0</required>
-    <documentation>Test category (used by the DevOps Inisght server reports)</documentation>
+    <documentation>Test category (used by the DevOps Insight server reports)</documentation>
     <option><name>system-test</name><value>system-test</value></option>
     <option><name>unit-test</name><value>unit-test</value></option>
     <option><name>smoke-test</name><value>smoke-test</value></option>
@@ -39,9 +39,9 @@
   </formElement>
 
   <formElement>
-    <type>select</type>
-    <label>Test Category:</label>
+    <label>Execution ID:</label>
     <property>executionId</property>
+    <type>entry</type>
     <required>1</required>
     <documentation>Id of the execution to get data for</documentation>
     <value></value>
@@ -50,9 +50,9 @@
   <formElement>
     <label>Metadata property path:</label>
     <property>metadataPropertyPath</property>
+    <type>entry</type>
     <documentation>Property sheet where run metadata will be stored. Optional field. If omitted, /myJob/subject7-%executionId% will be used.</documentation>
     <required>0</required>
-    <type>entry</type>
-  </formElement>
+   </formElement>
 
 </editor>

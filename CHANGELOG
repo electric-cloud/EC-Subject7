@@ -1,3 +1,9 @@
+2019-01-04 Laurent Rochette <lrochette@electric-cloud.com>
+  * 1.2.2.113: Fix #7, collectData testCategory parameter menu is empty
+
+2018-12-28 Laurent Rochette <lrochette@electric-cloud.com>
+  * 1.2.1.112: Revert data format to work in RCC without any changes
+
 2018-12-06 Laurent Rochette <lrochette@electric-cloud.com>
   * 1.2.1.80: Fix #3: Changed the way data is sent to allow for stacked bars
 
